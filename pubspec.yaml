@@ -1,0 +1,28 @@
+name: android_flutter
+description: A new Flutter application.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  # https://github.com/alibaba/fish-redux
+  fish_redux: ^0.3.4
+  # https://github.com/flutterchina/dio
+  dio: 3.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  json2entity: 1.0.6
+
+flutter:
+  uses-material-design: true
