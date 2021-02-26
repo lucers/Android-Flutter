@@ -17,6 +17,8 @@ dependencies:
   fish_redux: ^0.3.4
   # https://github.com/flutterchina/dio
   dio: 3.0.10
+  # https://github.com/theyakka/fluro
+  fluro: ^1.7.8
 
 dev_dependencies:
   flutter_test:
