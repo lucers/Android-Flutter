@@ -86,7 +86,7 @@ packages:
     source: hosted
     version: "2.1.5"
   cupertino_icons:
-    dependency: "direct routes.main"
+    dependency: "direct main"
     description:
       name: cupertino_icons
       url: "https://pub.flutter-io.cn"
@@ -100,7 +100,7 @@ packages:
     source: hosted
     version: "1.3.12"
   dio:
-    dependency: "direct routes.main"
+    dependency: "direct main"
     description:
       name: dio
       url: "https://pub.flutter-io.cn"
@@ -121,21 +121,21 @@ packages:
     source: hosted
     version: "5.2.1"
   fish_redux:
-    dependency: "direct routes.main"
+    dependency: "direct main"
     description:
       name: fish_redux
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.4"
   fluro:
-    dependency: "direct routes.main"
+    dependency: "direct main"
     description:
       name: fluro
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.7.8"
   flutter:
-    dependency: "direct routes.main"
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"

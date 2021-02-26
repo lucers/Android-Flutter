@@ -4,5 +4,8 @@ import 'package:flutter/material.dart';
 import 'settings_state.dart';
 
 Widget buildView(SettingsState state, Dispatch dispatch, ViewService viewService) {
-  return Container();
+  return Scaffold(
+      body: Center(
+        child: Text('Settings Page'),
+      ));
 }

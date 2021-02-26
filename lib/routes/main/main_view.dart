@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'main_state.dart';
 
 Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
-  return Container(
-  );
+  return Scaffold(
+      body: Center(
+    child: Text('Main Page'),
+  ));
 }

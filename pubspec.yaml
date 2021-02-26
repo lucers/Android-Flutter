@@ -1,4 +1,4 @@
-name: android_flutter
+name: Android_Flutter
 description: A new Flutter application.
 
 publish_to: 'none'
@@ -28,3 +28,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/

@@ -4,5 +4,8 @@ import 'package:flutter/material.dart';
 import 'login_state.dart';
 
 Widget buildView(LoginState state, Dispatch dispatch, ViewService viewService) {
-  return Container();
+  return Scaffold(
+      body: Center(
+    child: Text('Login Page'),
+  ));
 }
