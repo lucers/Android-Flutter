@@ -1,4 +1,4 @@
-name: Android_Flutter
+name: android_flutter
 description: A new Flutter application.
 
 publish_to: 'none'
@@ -11,14 +11,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^1.0.0
-  # https://github.com/alibaba/fish-redux
-  fish_redux: ^0.3.4
-  # https://github.com/flutterchina/dio
+  # https://pub.dev/packages/fish_redux
+  fish_redux: ^0.3.6
+  # https://pub.dev/packages/dio
   dio: 3.0.10
-  # https://github.com/theyakka/fluro
+  # https://pub.dev/packages/fluro
   fluro: ^1.7.8
+  # https://pub.flutter-io.cn/packages/fluttertoast
+  fluttertoast: ^7.1.8
+  # https://pub.dev/packages/shared_preferences
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +34,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/
+    - assets/images/2.0x/
+    - assets/images/3.0x/
