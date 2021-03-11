@@ -5,8 +5,8 @@ import 'entrance_state.dart';
 
 Widget buildView(EntranceState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
-      body: Center(
-    // child: Text("Entrance Page"),
-    child: new Image.asset('assets/images/ic_launcher.png'),
-  ));
+    body: Center(
+      child: new Image.asset('assets/images/ic_launcher.png'),
+    ),
+  );
 }

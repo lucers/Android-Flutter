@@ -6,12 +6,12 @@ import 'main_state.dart';
 Reducer<MainState> buildReducer() {
   return asReducer(
     <Object, Reducer<MainState>>{
-      MainAction.tapIndex: _onTap,
+      MainAction.tapNavigationItem: _onNavigationItemTap,
     },
   );
 }
 
-MainState _onTap(MainState state, Action action) {
+MainState _onNavigationItemTap(MainState state, Action action) {
   final int currentIndex = action.payload;
   return state.clone()..currentIndex = currentIndex;
 }

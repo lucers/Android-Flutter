@@ -1,27 +1,37 @@
-import 'package:android_flutter/routes.dart';
-import 'package:android_flutter/routes/entrance_page/entrance_page.dart';
+import 'package:android_flutter/generated/l10n.dart';
+import 'package:android_flutter/global/global_state.dart';
+import 'package:android_flutter/routes/routes.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:one_context/one_context.dart';
 
 Widget initApp() {
+  // Routes Config
   final router = FluroRouter();
   Routes.configureRoutes(router);
+  Application.router = router;
+
   return MaterialApp(
-    home: EntrancePage().buildPage(null),
-    title: 'Flutter',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-    ),
+    navigatorKey: OneContext().key,
+    home: Routes.listRoutes[0].page.buildPage(null),
+    onGenerateRoute: router.generator,
+    builder: OneContext().builder,
+    onGenerateTitle: (context) {
+      return S.of(context).appName;
+    },
+    theme: ThemeData(primaryColor: GlobalState().themeColor),
     localizationsDelegates: [
+      S.delegate,
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,
       GlobalCupertinoLocalizations.delegate
     ],
-    supportedLocales: [
-      const Locale.fromSubtags(languageCode: 'en'),
-      const Locale.fromSubtags(languageCode: 'zh'),
-    ],
+    supportedLocales: S.delegate.supportedLocales,
     debugShowCheckedModeBanner: false,
   );
+}
+
+class Application {
+  static FluroRouter router;
 }

@@ -1,6 +1,6 @@
+import 'package:android_flutter/routes/entrance_page/entrance_action.dart';
 import 'package:fish_redux/fish_redux.dart';
 
-import 'entrance_action.dart';
 import 'entrance_state.dart';
 
 Reducer<EntranceState> buildReducer() {

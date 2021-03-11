@@ -4,6 +4,6 @@ enum EntranceAction { action }
 
 class EntranceActionCreator {
   static Action onAction() {
-    return const Action(EntranceAction.action);
+    return Action(EntranceAction.action);
   }
 }
