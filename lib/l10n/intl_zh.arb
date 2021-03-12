@@ -1,4 +1,5 @@
 {
+  "@@locale": "zh",
   "appName": "Flutter",
   "home": "首页",
   "settings": "设置"

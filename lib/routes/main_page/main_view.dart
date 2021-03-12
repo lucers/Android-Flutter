@@ -10,7 +10,6 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
     body: GestureDetector(
       onTap: () {
         dispatch(MainActionCreator.onTextTap());
-        // GlobalStore.state.dispatch(GlobalActionCreator.onChangeLocal(Locale.fromSubtags(languageCode: 'zh')));
       },
       child: Center(
         child: Text(
@@ -36,7 +35,7 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
 }
 
 List<BottomNavigationBarItem> _buildNavigationBarItem(List<MainNavigationItem> navigationItems) {
-  List<BottomNavigationBarItem> _list = List();
+  List<BottomNavigationBarItem> _list = [];
   navigationItems.forEach((item) {
     _list.add(BottomNavigationBarItem(icon: item.itemIcon, label: item.itemLabel));
   });
