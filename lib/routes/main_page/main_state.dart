@@ -7,14 +7,18 @@ import 'package:one_context/one_context.dart';
 
 class MainState implements Cloneable<MainState>, GlobalBaseState {
   int currentIndex;
-  List<MainNavigationItem> navigationItems;
+  List<dynamic> navigationItems;
+  PageController pageController;
+  dynamic pageList;
 
   @override
   MainState clone() {
     return MainState()
       ..currentIndex = currentIndex
       ..navigationItems = navigationItems
-      ..themeColor = themeColor;
+      ..pageController = PageController()
+      ..themeColor = themeColor
+      ..pageList = pageList;
   }
 
   @override
@@ -26,9 +30,9 @@ MainState initState(Map<String, dynamic> args) {
     ..currentIndex = 0
     ..navigationItems = [
       new MainNavigationItem(itemIcon: Icon(Icons.home), itemLabel: S.of(OneContext().context).home),
-      new MainNavigationItem(itemIcon: Icon(Icons.category), itemLabel: "Category"),
-      new MainNavigationItem(itemIcon: Icon(Icons.add_shopping_cart), itemLabel: "Cart"),
-      new MainNavigationItem(itemIcon: Icon(Icons.flash_auto), itemLabel: "Flash Buy"),
-      new MainNavigationItem(itemIcon: Icon(Icons.account_box), itemLabel: "Account")
-    ];
+      new MainNavigationItem(itemIcon: Icon(Icons.category), itemLabel: S.of(OneContext().context).categories),
+      new MainNavigationItem(itemIcon: Icon(Icons.account_box), itemLabel: S.of(OneContext().context).mine)
+    ]
+    ..pageController = PageController()
+    ..pageList = [];
 }

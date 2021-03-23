@@ -2,5 +2,7 @@
   "@@locale": "zh",
   "appName": "Flutter",
   "home": "首页",
+  "categories": "分类",
+  "mine": "我的",
   "settings": "设置"
 }

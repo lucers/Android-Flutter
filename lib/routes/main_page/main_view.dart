@@ -7,34 +7,22 @@ import 'main_state.dart';
 
 Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
-    body: GestureDetector(
-      onTap: () {
-        dispatch(MainActionCreator.onTextTap());
-      },
-      child: Center(
-        child: Text(
-          "Main Page",
-          style: TextStyle(color: state.themeColor),
-        ),
-      ),
+    body: PageView(
+      controller: state.pageController,
+      physics: AlwaysScrollableScrollPhysics(),
     ),
     bottomNavigationBar: BottomNavigationBar(
-      items: _buildNavigationBarItem(state.navigationItems),
+      items: _buildNavigationBarItems(state.navigationItems),
       onTap: (index) {
         dispatch(MainActionCreator.onNavigationItemTap(index));
       },
       currentIndex: state.currentIndex,
-      elevation: 5.0,
-      type: BottomNavigationBarType.fixed,
-      iconSize: 20.0,
       selectedItemColor: state.themeColor,
-      selectedFontSize: 12.0,
-      unselectedFontSize: 12.0,
     ),
   );
 }
 
-List<BottomNavigationBarItem> _buildNavigationBarItem(List<MainNavigationItem> navigationItems) {
+List<BottomNavigationBarItem> _buildNavigationBarItems(List<MainNavigationItem> navigationItems) {
   List<BottomNavigationBarItem> _list = [];
   navigationItems.forEach((item) {
     _list.add(BottomNavigationBarItem(icon: item.itemIcon, label: item.itemLabel));

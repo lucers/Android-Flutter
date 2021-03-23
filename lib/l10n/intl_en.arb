@@ -2,5 +2,7 @@
   "@@locale": "en",
   "appName": "Flutter",
   "home": "Home",
+  "categories": "Categories",
+  "mine": "Mine",
   "settings": "Settings"
 }
