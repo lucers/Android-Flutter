@@ -22,9 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "appName" : MessageLookupByLibrary.simpleMessage("Flutter"),
-    "categories" : MessageLookupByLibrary.simpleMessage("Categories"),
+    "contacts" : MessageLookupByLibrary.simpleMessage("Contacts"),
     "home" : MessageLookupByLibrary.simpleMessage("Home"),
     "mine" : MessageLookupByLibrary.simpleMessage("Mine"),
+    "normal_login" : MessageLookupByLibrary.simpleMessage("Normal Login"),
+    "quick_login" : MessageLookupByLibrary.simpleMessage("Quick Login"),
     "settings" : MessageLookupByLibrary.simpleMessage("Settings")
   };
 }

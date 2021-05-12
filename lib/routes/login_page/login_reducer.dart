@@ -6,12 +6,15 @@ import 'login_state.dart';
 Reducer<LoginState> buildReducer() {
   return asReducer(
     <Object, Reducer<LoginState>>{
-      LoginAction.action: _onAction,
+      LoginAction.onChangeTabList: _onChangeTabList,
     },
   );
 }
 
-LoginState _onAction(LoginState state, Action action) {
-  final LoginState newState = state.clone();
+LoginState _onChangeTabList(LoginState state, Action action) {
+  var payload = action.payload as Map;
+  final LoginState newState = state.clone()
+    ..controller = payload["control"]
+    ..list = payload["tab"];
   return newState;
 }

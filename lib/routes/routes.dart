@@ -11,10 +11,13 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/widgets.dart' hide Page;
 
+import 'form_page/form_page.dart';
+
 class Routes {
   static const String entrancePage = "/entrancePage";
   static const String mainPage = "/mainPage";
   static const String loginPage = "/loginPage";
+  static const String formPage = "/formPage";
   static const String settingsPage = "/settingsPage";
   static const String webPage = "/webPage";
 
@@ -29,6 +32,7 @@ class Routes {
       PageInfo(pageName: entrancePage, page: EntrancePage()),
       PageInfo(pageName: mainPage, page: MainPage()),
       PageInfo(pageName: loginPage, page: LoginPage()),
+      PageInfo(pageName: formPage, page: FormPage()),
       PageInfo(pageName: settingsPage, page: SettingsPage()),
       PageInfo(pageName: webPage, page: WebPage()),
     ]);

@@ -1,9 +1,10 @@
 import 'package:fish_redux/fish_redux.dart';
 
-enum LoginAction { action }
+enum LoginAction { onChangeTabList }
 
 class LoginActionCreator {
-  static Action onAction() {
-    return const Action(LoginAction.action);
+
+  static Action onChangeTabListAction(map) {
+    return Action(LoginAction.onChangeTabList,payload: map);
   }
 }

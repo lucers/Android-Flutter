@@ -8,15 +8,11 @@ import 'entrance_view.dart';
 class EntrancePage extends Page<EntranceState, Map<String, dynamic>> {
   EntrancePage()
       : super(
-            initState: initState,
-            effect: buildEffect(),
-            reducer: buildReducer(),
-            view: buildView,
-            dependencies: Dependencies<EntranceState>(
-                adapter: null,
-                slots: <String, Dependent<EntranceState>>{
-                }),
-            middleware: <Middleware<EntranceState>>[
-            ],);
-
+          initState: initState,
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          view: buildView,
+          dependencies: Dependencies<EntranceState>(adapter: null, slots: <String, Dependent<EntranceState>>{}),
+          middleware: <Middleware<EntranceState>>[],
+        );
 }

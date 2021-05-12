@@ -9,7 +9,8 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     body: PageView(
       controller: state.pageController,
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
+      children: _buildPageViewItems(state.pageList),
     ),
     bottomNavigationBar: BottomNavigationBar(
       items: _buildNavigationBarItems(state.navigationItems),
@@ -26,6 +27,13 @@ List<BottomNavigationBarItem> _buildNavigationBarItems(List<MainNavigationItem> 
   List<BottomNavigationBarItem> _list = [];
   navigationItems.forEach((item) {
     _list.add(BottomNavigationBarItem(icon: item.itemIcon, label: item.itemLabel));
+  });
+  return _list;
+}
+
+List<Widget> _buildPageViewItems(List<Widget> pageViewItems) {
+  List<Widget> _list = [];
+  pageViewItems.forEach((item) {
   });
   return _list;
 }

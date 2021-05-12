@@ -6,7 +6,7 @@ import 'entrance_state.dart';
 Reducer<EntranceState> buildReducer() {
   return asReducer(
     <Object, Reducer<EntranceState>>{
-      EntranceAction.action: _onAction,
+      EntranceAction.toNext: _onAction,
     },
   );
 }

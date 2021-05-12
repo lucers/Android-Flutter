@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -56,11 +55,11 @@ class S {
     );
   }
 
-  /// `Categories`
-  String get categories {
+  /// `Contacts`
+  String get contacts {
     return Intl.message(
-      'Categories',
-      name: 'categories',
+      'Contacts',
+      name: 'contacts',
       desc: '',
       args: [],
     );
@@ -81,6 +80,26 @@ class S {
     return Intl.message(
       'Settings',
       name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Normal Login`
+  String get normal_login {
+    return Intl.message(
+      'Normal Login',
+      name: 'normal_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick Login`
+  String get quick_login {
+    return Intl.message(
+      'Quick Login',
+      name: 'quick_login',
       desc: '',
       args: [],
     );

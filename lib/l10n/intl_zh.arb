@@ -2,7 +2,9 @@
   "@@locale": "zh",
   "appName": "Flutter",
   "home": "首页",
-  "categories": "分类",
+  "contacts": "分类",
   "mine": "我的",
-  "settings": "设置"
+  "settings": "设置",
+  "normal_login": "普通登录",
+  "quick_login": "快捷登录"
 }

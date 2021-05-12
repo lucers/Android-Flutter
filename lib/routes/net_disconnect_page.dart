@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NotFoundPage extends StatelessWidget {
+class NetDisconnectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold();

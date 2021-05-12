@@ -7,9 +7,9 @@ import 'package:one_context/one_context.dart';
 
 class MainState implements Cloneable<MainState>, GlobalBaseState {
   int currentIndex;
-  List<dynamic> navigationItems;
+  List<MainNavigationItem> navigationItems;
   PageController pageController;
-  dynamic pageList;
+  List<Widget> pageList;
 
   @override
   MainState clone() {
@@ -30,7 +30,7 @@ MainState initState(Map<String, dynamic> args) {
     ..currentIndex = 0
     ..navigationItems = [
       new MainNavigationItem(itemIcon: Icon(Icons.home), itemLabel: S.of(OneContext().context).home),
-      new MainNavigationItem(itemIcon: Icon(Icons.category), itemLabel: S.of(OneContext().context).categories),
+      new MainNavigationItem(itemIcon: Icon(Icons.category), itemLabel: S.of(OneContext().context).contacts),
       new MainNavigationItem(itemIcon: Icon(Icons.account_box), itemLabel: S.of(OneContext().context).mine)
     ]
     ..pageController = PageController()

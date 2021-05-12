@@ -2,7 +2,9 @@
   "@@locale": "en",
   "appName": "Flutter",
   "home": "Home",
-  "categories": "Categories",
+  "contacts": "Contacts",
   "mine": "Mine",
-  "settings": "Settings"
+  "settings": "Settings",
+  "normal_login": "Normal Login",
+  "quick_login": "Quick Login"
 }

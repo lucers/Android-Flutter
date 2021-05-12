@@ -20,7 +20,12 @@ Widget initApp() {
     onGenerateTitle: (context) {
       return S.of(context).appName;
     },
-    theme: ThemeData(primaryColor: GlobalState().themeColor),
+    // theme config
+    theme: ThemeData(
+        primaryColor: GlobalState().themeColor,
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent),
+    // local support
     localizationsDelegates: [
       S.delegate,
       GlobalMaterialLocalizations.delegate,
@@ -28,6 +33,7 @@ Widget initApp() {
       GlobalCupertinoLocalizations.delegate
     ],
     supportedLocales: S.delegate.supportedLocales,
+    // hide debug flag
     debugShowCheckedModeBanner: false,
   );
 }

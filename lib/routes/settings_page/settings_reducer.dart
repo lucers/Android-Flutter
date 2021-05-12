@@ -6,12 +6,16 @@ import 'settings_state.dart';
 Reducer<SettingsState> buildReducer() {
   return asReducer(
     <Object, Reducer<SettingsState>>{
-      SettingsAction.action: _onAction,
+      SettingsAction.columnTap: _onColumnTap,
+      SettingsAction.rowTap: _onRowTap,
     },
   );
 }
 
-SettingsState _onAction(SettingsState state, Action action) {
-  final SettingsState newState = state.clone();
-  return newState;
+SettingsState _onColumnTap(SettingsState state, Action action) {
+  return state.clone()..data = action.payload;
+}
+
+SettingsState _onRowTap(SettingsState state, Action action) {
+  return state.clone()..data = action.payload;
 }

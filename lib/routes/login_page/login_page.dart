@@ -1,5 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 
+import 'login_component_state.dart';
 import 'login_effect.dart';
 import 'login_reducer.dart';
 import 'login_state.dart';
@@ -15,4 +16,9 @@ class LoginPage extends Page<LoginState, Map<String, dynamic>> {
           dependencies: Dependencies<LoginState>(adapter: null, slots: <String, Dependent<LoginState>>{}),
           middleware: <Middleware<LoginState>>[],
         );
+
+  @override
+  ComponentState<LoginState> createState() {
+    return LoginComponentState();
+  }
 }
